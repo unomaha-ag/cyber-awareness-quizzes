@@ -1,4 +1,3 @@
-# Module 1 Quiz
+# Quiz Repository
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/unoag/pen/dyEoyWa](https://codepen.io/unoag/pen/dyEoyWa).
-
+This repository holds the assets for the quizzes.
