@@ -65,6 +65,12 @@ function displayQuestion() {
   quizContainer.innerHTML = '';
   quizContainer.appendChild(questionElement);
   quizContainer.appendChild(optionsElement);
+
+  if (currentQuestion === quizData.length - 1) {
+    submitButton.textContent = 'Submit Quiz';
+  } else {
+    submitButton.textContent = 'Next Question';
+  }
 }
 
 function checkAnswer() {
@@ -134,6 +140,7 @@ function showAnswer() {
   `;
 }
 
+submitButton.textContent = 'Next Question';
 submitButton.addEventListener('click', checkAnswer);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
