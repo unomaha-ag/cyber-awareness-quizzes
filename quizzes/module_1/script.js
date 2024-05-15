@@ -100,9 +100,17 @@ function displayResult() {
   quizContainer.style.display = 'none';
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
-  showAnswerButton.style.display = 'inline-block';
+
+  // Hide the "Show Answer" button if the user gets all the questions correct
+  if (incorrectAnswers.length === 0) {
+    showAnswerButton.style.display = 'none';
+  } else {
+    showAnswerButton.style.display = 'inline-block';
+  }
+
   resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
 }
+
 
 function retryQuiz() {
   currentQuestion = 0;
